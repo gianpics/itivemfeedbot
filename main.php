@@ -80,7 +80,7 @@
                 // creazione inline keyboard
                 $btnScuola = array('text'=>"\xF0\x9F\x8F\xA1+Sito+scuola", 'url'=>'https://www.itismarzotto.it');
                 $btnFeed = array('text'=>"\xF0\x9F\x93\xA3+Feed+RSS", 'url'=>'https://www.itismarzotto.it/wp/feed-rss/');
-                $btnSorgente = array('text'=>"\xF0\x9F\x93\x9C+Codice+sorgente+bot", 'callback_data'=>$urlsource);
+                $btnSorgente = array('text'=>"\xF0\x9F\x93\x9C+Codice+sorgente+bot", 'url'=>$urlsource);
                 $btnSviluppatore = array('text'=>"\xF0\x9F\x93\xA7+Contatta+lo+sviluppatore", 'url'=>$tmedev);
                 $keyboard = array('inline_keyboard'=>array(array($btnScuola), array($btnFeed), array($btnSorgente), array($btnSviluppatore)));
 
@@ -109,10 +109,6 @@
 
         // elabora risposta
         switch($data){
-            case "source":
-                $text = "Il codice sorgente verrà reso disponibile prossimamente!";
-                $url = $website."/answerCallbackQuery?callback_query_id=".$queryId."&text=".urlencode($text);
-                break;
             case "iscrivi":
                 // inserimento utente in database
                 if(aggiungiUser($userId))
