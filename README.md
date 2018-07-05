@@ -5,8 +5,8 @@ Il sistema memorizza quindi in un database gli identificativi degli utenti che h
 In caso affermativo questi vengono inseriti nel database per poi essere inviati agli utenti abbonati.
 E' possibile disiscriversi dal servizio in qualsiasi momento e le ultime notizie possono essere visualizzate anche manualmente attraverso un apposito comando.
 
-Il bot si compone principalmente di tre script fondamentali sviluppati in PHP:\n
-• main.php: gestisce l'interazione con l'utente e si occupa di inserire e rimuovere gli utenti dal database.\n
+Il bot si compone principalmente di tre script fondamentali sviluppati in PHP:
+• main.php: gestisce l'interazione con l'utente e si occupa di inserire e rimuovere gli utenti dal database.
 • saturno.php: viene eseguito automaticamente a cadenza oraria da un cron job e si occupa di scaricare i feed RSS (operazione di parsing), inserire i nuovi articoli nel database e rimuovere quelli obsoleti.
 • mercurio.php: viene avviato da saturno.php se sono state inserite nuove notizie nel database e si occupa di inviarle agli utenti iscritti al servizio.
 
