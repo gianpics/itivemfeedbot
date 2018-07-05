@@ -16,7 +16,7 @@
     $fconf = "path/to/log/file";
 
     // info database
-	$dbhost = 'host';
+    $dbhost = 'host';
     $dbuser = 'user';
     $dbpass = 'password';
     $dbname = 'database';
