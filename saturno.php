@@ -26,8 +26,8 @@
 
     // ottenimento notizia più recente presente nel database
     $results = $mysqli->query(' SELECT * FROM articoli
-                                ORDER BY data
-                                DESC LIMIT 1');
+                                ORDER BY data DESC 
+				LIMIT 1');
     if(!$results)
     {
         # LOG errore
@@ -37,7 +37,7 @@
 
     $record = $results->fetch_assoc();
 
-    // minDate è la data della notizia più recente prensente nel database
+    // minDate è la data della notizia più recente presente nel database
     // se nessuna notizia è presente viene assegnato il valore minimo di date (UNIX time)
     if($results->num_rows > 0) $minDate = $record['data'];
     else $minDate = date('Y-m-d H:i:s', 0);
@@ -81,8 +81,8 @@
 
         $result = $mysqli->query("  SELECT data
                                     FROM articoli
-                                    ORDER BY data
-                                    DESC LIMIT 10,1");
+                                    ORDER BY data DESC 
+				    LIMIT 10,1");
         if(!$result)
         {
             # LOG errore
