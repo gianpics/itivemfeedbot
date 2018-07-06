@@ -335,8 +335,8 @@
         $message = "";
 		foreach($articoli as $articolo)
 		{
-            // emoji del numero dell'articolo stampato
-            $emoji = "\x3".$i."\xE2\x83\xA3";
+            // emoji del numero dell'articolo stampato, il codice delle emoji da 1 a 9 è progressivo, il codice dell'emoji del 10 è differente
+            $emoji = $i<10 ? "\x3".$i."\xE2\x83\xA3" : "\xF0\x9F\x94\x9F";
 
 			// invia articolo all'$utente
 			setlocale(LC_ALL, 'it_IT.UTF-8'); // imposta locale in italiano per stampare data, alternativa date('d-m-Y H:i:s', strtotime($articolo['data']))
