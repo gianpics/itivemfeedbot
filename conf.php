@@ -38,6 +38,9 @@
                 break;
             case "out":
                 // messaggio in uscita
+                $omiss = 600;
+                if(strlen($message)>$omiss) $message = substr($message, 0, $omiss)."  <∙ ∙ ∙  omesso  ∙ ∙ ∙>";
+
                 $text = '<span style="color:#5c8a8a">→ ['.date('G:i:s d/m/y')."]: ".$message."</span><br>\n";
                 break;
             case "ser":
