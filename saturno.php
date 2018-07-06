@@ -73,7 +73,7 @@
         }
     }
 
-    // rimozione articoli in eccesso se ne sono stati inseriti di nuovi
+    // rimozione articoli in eccesso (>5) se ne sono stati inseriti di nuovi
     if($dataIns!=NULL)
     {
         # LOG inserimento nuovi articoli
