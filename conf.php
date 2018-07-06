@@ -30,6 +30,10 @@
     {
         $f = fopen($GLOBALS['fconf'], "a");
 
+        // riduzione messaggi eccessivamente lunghi (messaggi di errore non raggiungono i 600 caratteri)
+        $omiss = 600;
+        if(strlen($message)>$omiss) $message = substr($message, 0, $omiss)."  <∙ ∙ ∙  omesso  ∙ ∙ ∙>";
+        
         // in - messaggio in entrata, out - risposta, ser - log di servizio, err - errore
         switch($type){
             case "in":
@@ -38,9 +42,6 @@
                 break;
             case "out":
                 // messaggio in uscita
-                $omiss = 600;
-                if(strlen($message)>$omiss) $message = substr($message, 0, $omiss)."  <∙ ∙ ∙  omesso  ∙ ∙ ∙>";
-
                 $text = '<span style="color:#5c8a8a">→ ['.date('G:i:s d/m/y')."]: ".$message."</span><br>\n";
                 break;
             case "ser":
