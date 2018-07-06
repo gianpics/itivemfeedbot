@@ -73,7 +73,7 @@
         }
     }
 
-    // rimozione articoli in eccesso (>5) se ne sono stati inseriti di nuovi
+    // rimozione articoli in eccesso (>$maxArt) se ne sono stati inseriti di nuovi
     if($dataIns!=NULL)
     {
         # LOG inserimento nuovi articoli
@@ -82,7 +82,7 @@
         $result = $mysqli->query("  SELECT data
                                     FROM articoli
                                     ORDER BY data DESC 
-				    LIMIT 10,1");
+				    LIMIT $maxArt,1");
         if(!$result)
         {
             # LOG errore
