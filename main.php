@@ -145,31 +145,15 @@
                 editMessage($chatId, $messageId, $newText);
                 break;
             case "ultime_1":
-                // visualizzazione ultime 1 notizie
-                $message = ultimeNotizie(1);
-                sendMessage($chatId, $message, array("disable_web_page_preview=true", "parse_mode=HTML"));
-
-                $newText = "Operazione eseguita";
-                $url = $website."/answerCallbackQuery?callback_query_id=".$queryId;
-                //editMessage($chatId, $messageId, $newText);
-                break;
             case "ultime_3":
-                // visualizzazione ultime 3 notizie
-                $message = ultimeNotizie(3);
-                sendMessage($chatId, $message, array("disable_web_page_preview=true", "parse_mode=HTML"));
-
-                $newText = "Operazione eseguita";
-                $url = $website."/answerCallbackQuery?callback_query_id=".$queryId;
-                //editMessage($chatId, $messageId, $newText);
-                break;
             case "ultime_5":
-                // visualizzazione ultime 5 notizie
-                $message = ultimeNotizie(5);
+                // visualizzazione ultime $n notizie, $n ricavato ricercando attraverso una regular expression (ricerca pattern)
+                preg_match('#(\d+)$#', $data, $n);
+                $message = ultimeNotizie($n[0]);
                 sendMessage($chatId, $message, array("disable_web_page_preview=true", "parse_mode=HTML"));
 
                 $newText = "Operazione eseguita";
                 $url = $website."/answerCallbackQuery?callback_query_id=".$queryId;
-                //editMessage($chatId, $messageId, $newText);
                 break;
             default:
                 $text = "Qualcosa è andato storto";
