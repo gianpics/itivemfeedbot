@@ -15,6 +15,9 @@
 
     $fconf = "path/to/log/file";
 
+    // max articoli in database
+    $maxArt = 5;    
+
     // info database
     $dbhost = 'host';
     $dbuser = 'user';
