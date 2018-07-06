@@ -66,8 +66,9 @@
                 $btnUno = array('text'=>"\x31\xE2\x83\xA3", 'callback_data'=>'ultime_1');
                 $btnTre = array('text'=>"\x33\xE2\x83\xA3", 'callback_data'=>'ultime_3');
                 $btnCinque = array('text'=>"\x35\xE2\x83\xA3", 'callback_data'=>'ultime_5');
+                $btnDieci = array('text'=>"\xF0\x9F\x94\x9F", 'callback_data'=>'ultime_10');
                 $btnAnnulla = array('text'=>'Annulla', 'callback_data'=>'annulla');
-                $rigaUno = array($btnUno, $btnTre, $btnCinque);
+                $rigaUno = array($btnUno, $btnTre, $btnCinque, $btnDieci);
                 $rigaDue = array($btnAnnulla);
                 $keyboard = array('inline_keyboard'=>array($rigaUno, $rigaDue));
 
