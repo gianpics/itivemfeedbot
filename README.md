@@ -14,5 +14,5 @@ L'accesso al database avviene tramite l'estensione MySQLi.
 Vengono utilizzate una tabella utenti contenente l'id univoco degli utenti iscritti al servizio assieme alla data di inserimento e una tabella articoli che associa ad ogni articolo un codice univoco oltre a memorizzarne gli elementi quali titolo, descrizione, link e data di pubblicazione.
 Segue lo schema logico del database:
 
-- UTENTI(user_id: bigint, data: timestamp)
-- ARTICOLI(id: int, titolo: text, descrizione: text, link: text, data: datetime)
+- UTENTI(__user_id__: bigint, data: timestamp)
+- ARTICOLI(__id__: int, titolo: text, descrizione: text, link: text, data: datetime)
