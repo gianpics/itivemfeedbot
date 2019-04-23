@@ -16,5 +16,3 @@ Segue lo schema logico del database:
 
 - UTENTI(__user_id__: bigint, data: timestamp)
 - ARTICOLI(__id__: int, titolo: text, descrizione: text, link: text, data: datetime)
-
-e
